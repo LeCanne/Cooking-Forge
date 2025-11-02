@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e495c14fe74d6648ba94a6c2cab6d0c, type: 3}
   m_Name: ExampleMinigame
   m_EditorClassIdentifier: Assembly-CSharp::MinigameObject
-  minigame:
+  minigameData:
     difficulty: 0
     minigame: {fileID: 4858397846618037596, guid: 2c1b59443c6a8c046a345d193ce2fa90, type: 3}
