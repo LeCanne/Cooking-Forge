@@ -7,7 +7,7 @@ public class UIListener : MonoBehaviour
     public UnityEvent minigamesEnd;
     private void Awake()
     {
-        Debug.Log(RecipesHandler.Instance.name);
+        
         RecipesHandler.Instance.MinigamesOver.AddListener(OnMinigamesEnd);
     }
 

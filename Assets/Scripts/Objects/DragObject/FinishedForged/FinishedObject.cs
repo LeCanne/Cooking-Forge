@@ -11,7 +11,12 @@ public class FinishedObject : DragObject
         public ENUM_WEAPONTYPES weaponType;
         public Sprite sprite;
     }
+   
+    public WeaponData weaponData = new WeaponData();
 
-    public WeaponData weaponData;
+    public void Awake()
+    {
+        goBack = true;
+    }
 
 }

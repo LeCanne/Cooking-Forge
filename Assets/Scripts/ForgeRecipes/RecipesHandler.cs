@@ -12,6 +12,8 @@ public class RecipesHandler: MonoBehaviour
     private List<ForgeMinigame> _minigames = new List<ForgeMinigame>();
     public UnityEvent NextMinigame = new UnityEvent();
     public UnityEvent MinigamesOver = new UnityEvent();
+    [HideInInspector]public UnityEvent<RecipeData, int> broadcastResult = new UnityEvent<RecipeData,int>();
+   
 
     private static RecipesHandler _instance;
     public static RecipesHandler Instance
@@ -59,6 +61,7 @@ public class RecipesHandler: MonoBehaviour
 
     IEnumerator MinigameProcess(Recipe recipeObject)
     {
+        int quality = 0;
         forgeMinigame = recipeObject.recipeData.minigames;
         //Assign GameObjects associated to prefab scripts to list
         //Then, spawn clones of minigames via their GameObject.
@@ -91,7 +94,13 @@ public class RecipesHandler: MonoBehaviour
 
         Debug.Log("AllMinigamesDone");
         MinigamesOver.Invoke();
+        RecipeResult(recipeObject.recipeData, quality);
         yield return null;
+    }
+
+    void RecipeResult(RecipeData recipe, int quality)
+    {
+        broadcastResult.Invoke(recipe, quality);
     }
 
     private IEnumerator WaitUntilEvent(UnityEvent unityEvent)

@@ -2,22 +2,40 @@ using UnityEngine;
 
 public class PNJ_Commissioner : MonoBehaviour
 {
-    public Commission commission;
+    
+    public CommissionerObject commissioner;
     SpriteRenderer spriteRenderer;
     CommissionData commissionData;
 
 
     private void Awake()
     {
-        commissionData = commission.data;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        InitializeCommissioner();
+        
+
+    }
+
+    void InitializeCommissioner()
+    {
+        commissionData = commissioner.CommissionerData.commision.data;
+        //spriteRenderer.sprite = commissioner.CommissionerData.sprite;
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Validates if colliding object is a finishedObject.
+        //Validates if colliding object is a finishedObject
         if (collision.TryGetComponent<FinishedObject>(out FinishedObject finishedObject)) 
         {
+            //Checks the commission and does a behavior
             ValidateCommission(finishedObject.weaponData);
+
+
+            //Clears the Commissioner and the Commission
+            //WARN: May be bad practice, object pooling might be considered.
+            Destroy(finishedObject.gameObject);
+            Destroy(gameObject);
 
         }
     }
@@ -37,5 +55,7 @@ public class PNJ_Commissioner : MonoBehaviour
         }
 
         Debug.Log("EndCommission");
+        
+       
     }
 }

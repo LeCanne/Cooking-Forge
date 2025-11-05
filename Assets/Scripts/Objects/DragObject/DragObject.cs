@@ -5,7 +5,7 @@ using UnityEngine.InputSystem.EnhancedTouch;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 
-
+[RequireComponent(typeof(Collider2D))]
 public class DragObject : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     Vector2 originalPos;
