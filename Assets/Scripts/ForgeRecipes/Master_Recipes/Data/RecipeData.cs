@@ -5,6 +5,7 @@ public class RecipeData
 {
     [SerializeField] public string name;
     [SerializeField] public string description;
+    [SerializeField] public ENUM_WEAPONTYPES weaponType;
     [SerializeField] public float cost;
     [SerializeField] public float reward;
     [SerializeField] public float difficulty;

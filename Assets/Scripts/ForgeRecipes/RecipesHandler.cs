@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
+//This Singleton handles all the recipes states, their minigame flow, ect...
 public class RecipesHandler: MonoBehaviour
 {
     public MinigameObject[] forgeMinigame;
