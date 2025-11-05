@@ -7,7 +7,7 @@ public class GameInitializer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
-        
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         DayHandler.Instance.StartGame(dayIndex, dayList);
     }
 }
