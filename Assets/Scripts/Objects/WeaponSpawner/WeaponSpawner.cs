@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class WeaponSpawner : MonoBehaviour
 {
+    public Sprite spriteTest;
     private void Awake()
     {
         RecipesHandler.Instance.broadcastResult.AddListener(CraftWeapon);
@@ -15,6 +16,7 @@ public class WeaponSpawner : MonoBehaviour
         finishedWeapon.AddComponent<FinishedObject>();
         finishedWeapon.AddComponent<SpriteRenderer>();
 
+        finishedWeapon.GetComponent<SpriteRenderer>().sprite = spriteTest;
         //Get weapon data of created object.
         FinishedObject finished = finishedWeapon.GetComponent<FinishedObject>();
         finished.weaponData = new FinishedObject.WeaponData();

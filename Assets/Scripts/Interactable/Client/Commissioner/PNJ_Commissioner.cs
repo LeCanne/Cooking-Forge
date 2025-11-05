@@ -1,23 +1,26 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PNJ_Commissioner : MonoBehaviour
 {
     
     public CommissionerObject commissioner;
+    public int commissionNumber;
     SpriteRenderer spriteRenderer;
     CommissionData commissionData;
+
+    [HideInInspector]public UnityEvent<int> commissionDone = new UnityEvent<int>();
 
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        InitializeCommissioner();
+        
         
 
     }
 
-    void InitializeCommissioner()
+    public void InitializeCommissioner()
     {
         commissionData = commissioner.CommissionerData.commision.data;
         //spriteRenderer.sprite = commissioner.CommissionerData.sprite;
@@ -30,7 +33,7 @@ public class PNJ_Commissioner : MonoBehaviour
         {
             //Checks the commission and does a behavior
             ValidateCommission(finishedObject.weaponData);
-
+            
 
             //Clears the Commissioner and the Commission
             //WARN: May be bad practice, object pooling might be considered.
@@ -54,6 +57,7 @@ public class PNJ_Commissioner : MonoBehaviour
             Debug.Log("GoodName");
         }
 
+        commissionDone.Invoke(commissionNumber+1);
         Debug.Log("EndCommission");
         
        

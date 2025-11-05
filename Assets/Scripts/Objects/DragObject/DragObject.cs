@@ -19,6 +19,7 @@ public class DragObject : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         if (currentDragged != null)
         {
+            
             StopCoroutine(currentDragged);
             touchable = true;
 
