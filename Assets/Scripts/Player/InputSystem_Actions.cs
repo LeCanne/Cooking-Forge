@@ -94,9 +94,9 @@ public partial class @Actions_Player: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Touch"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""9c2f80e9-acdb-404d-8ac8-48880e383595"",
-                    ""expectedControlType"": ""Delta"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -106,7 +106,7 @@ public partial class @Actions_Player: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""2bb489eb-9afd-4672-93fd-e98c2bb7cb34"",
-                    ""path"": ""<Touchscreen>/delta"",
+                    ""path"": ""<Touchscreen>/Press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

@@ -15,9 +15,10 @@ MonoBehaviour:
   recipeData:
     name: Sword
     description: A sick as fuck sword
+    weaponType: 0
     cost: 0
     reward: 0
     difficulty: 0
     minigames:
-    - {fileID: 11400000, guid: cd3e896fe8fc80947b345b34fc5419a2, type: 2}
+    - {fileID: 11400000, guid: 4bababd7a27aef44dba28b63e6eeeebc, type: 2}
     - {fileID: 11400000, guid: cd3e896fe8fc80947b345b34fc5419a2, type: 2}
