@@ -274,7 +274,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2.7693758}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0.20000005}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &2951539472853498537
@@ -719,7 +719,7 @@ MonoBehaviour:
   ovenPos: {fileID: 2214391493880938052}
   basePos: {fileID: 7824765661612444537}
   metalShard: {fileID: 8833394073857245081}
-  heat: 0.549
+  heat: 0
   heatSpeed: 0.5
   minHeat: 0.708
   maxHeat: 0.908

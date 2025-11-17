@@ -82,6 +82,12 @@ public class HeatMinigame : ForgeMinigame
         {
            heat += heatSpeed * Time.deltaTime;
            minigameStarted = true;
+
+            if(heat >= 1)
+            {
+               
+                Donot();
+            }
         }  
     }
 
@@ -111,6 +117,8 @@ public class HeatMinigame : ForgeMinigame
 
     IEnumerator Done()
     {
+        currentLerp = StartCoroutine(LerpToPos(basePos.transform.position));
+        StopCoroutine(currentLerp);
         yield return new WaitForSeconds(1f);
         Success();
     }
