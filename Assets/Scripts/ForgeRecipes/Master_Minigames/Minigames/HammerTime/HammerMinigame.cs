@@ -5,6 +5,7 @@ public class HammerMinigame : ForgeMinigame
     [Range(0, 1)] public float power;
     public float time;
     public float speed;
+    [Range(0.0f,0.2f)]public float offsetResolution;
     int slamNumber;
 
     [Range(0,1)]public float barPosition;
@@ -39,7 +40,7 @@ public class HammerMinigame : ForgeMinigame
     void HammerSlam()
     {
         Debug.Log("clicked");
-        if (power > barPosition && power < barPosition+barWidth*0.1f)
+        if (power > barPosition-offsetResolution && power < (barPosition+barWidth*0.1f)+offsetResolution)
         {
             Debug.Log("SLAM");
 
