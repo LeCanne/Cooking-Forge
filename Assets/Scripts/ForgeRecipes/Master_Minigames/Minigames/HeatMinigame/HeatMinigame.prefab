@@ -70,7 +70,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0.708
+  m_FillAmount: 0.653
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0.09200001
+  m_FillAmount: 0.21200001
   m_FillClockwise: 1
   m_FillOrigin: 1
   m_UseSpriteMesh: 0
@@ -679,7 +679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8653244102273627055
 Transform:
   m_ObjectHideFlags: 0
@@ -721,8 +721,8 @@ MonoBehaviour:
   metalShard: {fileID: 8833394073857245081}
   heat: 0
   heatSpeed: 0.5
-  minHeat: 0.708
-  maxHeat: 0.908
+  minHeat: 0.653
+  maxHeat: 0.788
   ValueChanged:
     m_PersistentCalls:
       m_Calls: []

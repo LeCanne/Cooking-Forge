@@ -41,6 +41,9 @@ public class HammerMinigame : ForgeMinigame
     {
         Debug.Log("clicked");
         if (power > barPosition-offsetResolution && power < (barPosition+barWidth*0.1f)+offsetResolution)
+        float minpos = barPosition - offsetResolution;
+        float maxpos = (barPosition + barWidth * 0.1f) + offsetResolution;
+        if (power > minpos && power < maxpos)
         {
             Debug.Log("SLAM");
 
