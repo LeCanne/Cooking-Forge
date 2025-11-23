@@ -29,10 +29,10 @@ public class PNJ_Commissioner : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Validates if colliding object is a finishedObject
-        if (collision.TryGetComponent<FinishedObject>(out FinishedObject finishedObject)) 
+        if (collision.TryGetComponent<WeaponObject>(out WeaponObject finishedObject)) 
         {
             //Checks the commission and does a behavior
-            ValidateCommission(finishedObject.weaponData);
+            ValidateCommission(finishedObject);
             
 
             //Clears the Commissioner and the Commission
@@ -45,14 +45,14 @@ public class PNJ_Commissioner : MonoBehaviour
 
 
     //Compares data of the commission with the data of the finished object.
-    void ValidateCommission(FinishedObject.WeaponData weaponData)
+    void ValidateCommission(WeaponObject weaponData)
     {
-        if( commissionData.type == weaponData.weaponType)
+        if( commissionData.weapon.WeaponData.weaponType == weaponData.weaponType)
         {
             Debug.Log("GoodType");
         }
 
-        if (commissionData.name == weaponData.name)
+        if (commissionData.weapon.WeaponData.WeaponName == weaponData.weaponName)
         {
             Debug.Log("GoodName");
         }

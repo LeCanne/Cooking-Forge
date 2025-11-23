@@ -8,7 +8,7 @@ public class RecipeSlot : MonoBehaviour
 
     private void Awake()
     {
-        recipeName.text = recipeObject.recipeData.name;
+        recipeName.text = recipeObject.recipeData.WeaponObject.name;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

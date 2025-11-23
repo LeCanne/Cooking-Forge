@@ -16,6 +16,14 @@ public class HammerMinigame : ForgeMinigame
         PlayerControlsHandler.Instance.Touch += HammerSlam;
        ChangeBarLocation();
     }
+    private void OnDisable()
+    {
+        if (PlayerControlsHandler.Instance != null)
+        {
+            PlayerControlsHandler.Instance.Touch -= HammerSlam;
+        
+        }
+    }
 
     private void Start()
     {
@@ -40,7 +48,6 @@ public class HammerMinigame : ForgeMinigame
     void HammerSlam()
     {
         Debug.Log("clicked");
-        if (power > barPosition-offsetResolution && power < (barPosition+barWidth*0.1f)+offsetResolution)
         float minpos = barPosition - offsetResolution;
         float maxpos = (barPosition + barWidth * 0.1f) + offsetResolution;
         if (power > minpos && power < maxpos)

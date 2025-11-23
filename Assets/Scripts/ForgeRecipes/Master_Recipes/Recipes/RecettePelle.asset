@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: RecettePelle
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
   recipeData:
-    name: Pelle
-    description: 
-    weaponType: 0
+    WeaponObject: {fileID: 0}
     cost: 1.7
     reward: 6.69
     difficulty: 1

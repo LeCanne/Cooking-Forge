@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: ExampleRecipe
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
   recipeData:
-    name: Sword
-    description: A sick as fuck sword
-    weaponType: 0
+    WeaponObject: {fileID: 11400000, guid: 6670430d6ebf6b04c86e566fd1124e3c, type: 2}
     cost: 0
     reward: 0
     difficulty: 0
     minigames:
     - {fileID: 11400000, guid: 4bababd7a27aef44dba28b63e6eeeebc, type: 2}
     - {fileID: 11400000, guid: 85fc6f0369087544eb10a0ae03be0d21, type: 2}
-    - {fileID: 11400000, guid: 4bababd7a27aef44dba28b63e6eeeebc, type: 2}
+    - {fileID: 11400000, guid: 02d5231fd50c8d4438bb0cecd3af3b6f, type: 2}

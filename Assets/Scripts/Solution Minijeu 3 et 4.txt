@@ -1,0 +1,20 @@
+Minijeu 3: Polish
+
+Sprite de la LAME de l'arme posée sur l'établit :
+
+- Un shader est appliqué sur la lame
+- En fonction du pourcentage de la lame nettoyée, définir la fin du mini-jeu
+
+Minijeu 4: Assemblage
+
+Sprite de l'arme posée sur l'établit, les parties sont séparées.
+Sprite de l'arme mis en noir sur l'établit pour définir les zones où poser les parties séparées.
+
+
+
+Réunion - Compte Rendu:
+
+Problèmes réglés mais:
+
+- Chaque sprite doit être séparé en plusieurs parties lors de l'importation
+- Shader artist??? trouver une solution rapide pour appliquer les shader (shadergraph etc)

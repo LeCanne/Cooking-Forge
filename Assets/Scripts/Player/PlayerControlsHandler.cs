@@ -38,6 +38,8 @@ public class PlayerControlsHandler : MonoBehaviour, Actions_Player.IPlayerAction
     public event Action Touch;
     public event Action CancelTouch;
 
+    public event Action<Vector2> DragInfo;
+
     public void OnEnable()
     {
         if (controls == null)
@@ -47,6 +49,7 @@ public class PlayerControlsHandler : MonoBehaviour, Actions_Player.IPlayerAction
             controls.Player.SetCallbacks(this);
         }
         controls.Player.Enable();
+        controls.Player.Drag.performed += OnDrag;
     }
 
     public void OnDisable()
@@ -71,10 +74,7 @@ public class PlayerControlsHandler : MonoBehaviour, Actions_Player.IPlayerAction
     {
         if(context.phase == InputActionPhase.Performed)
         {
-           
-                Touch?.Invoke();
-            
-         
+            Touch?.Invoke();
         }
         if(context.phase == InputActionPhase.Canceled)
         {
@@ -82,6 +82,11 @@ public class PlayerControlsHandler : MonoBehaviour, Actions_Player.IPlayerAction
         }
     }
 
-   
-  
+    public void OnDrag(InputAction.CallbackContext context)
+    { 
+       
+            DragInfo?.Invoke(context.ReadValue<Vector2>());
+            
+        
+    }
 }
