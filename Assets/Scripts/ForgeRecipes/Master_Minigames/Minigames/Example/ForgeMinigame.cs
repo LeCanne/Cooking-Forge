@@ -5,7 +5,8 @@ using UnityEngine.Events;
 public class ForgeMinigame : MonoBehaviour
 {
     
-    [HideInInspector] public UnityEvent MinigameComplete;
+    [HideInInspector]public UnityEvent MinigameComplete;
+    [HideInInspector]public WeaponObject weaponObject;
     [SerializeField]public int difficulty;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

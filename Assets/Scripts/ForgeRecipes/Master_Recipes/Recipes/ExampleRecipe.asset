@@ -18,6 +18,4 @@ MonoBehaviour:
     reward: 0
     difficulty: 0
     minigames:
-    - {fileID: 11400000, guid: 4bababd7a27aef44dba28b63e6eeeebc, type: 2}
-    - {fileID: 11400000, guid: 85fc6f0369087544eb10a0ae03be0d21, type: 2}
-    - {fileID: 11400000, guid: 02d5231fd50c8d4438bb0cecd3af3b6f, type: 2}
+    - {fileID: 11400000, guid: 47a3942ac32a1df40b78dd6ffb95a8be, type: 2}

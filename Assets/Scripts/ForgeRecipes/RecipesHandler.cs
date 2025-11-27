@@ -72,6 +72,8 @@ public class RecipesHandler: MonoBehaviour
             myforge.SetActive(false);
             ForgeMinigame myMg = myforge.GetComponent<ForgeMinigame>();
             myMg.MinigameComplete.AddListener(LaunchNext);
+            myMg.weaponObject = recipeObject.recipeData.WeaponObject.WeaponData.WeaponPrefab;
+           
             _minigames.Add(myMg);
         }
 

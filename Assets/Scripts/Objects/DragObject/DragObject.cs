@@ -11,25 +11,30 @@ public class DragObject : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     Vector2 originalPos;
     bool holding;
     bool touchable = true;
+    public bool notInteractable;
     public bool goBack;
     public float lerpDuration = 0.25f;
     Coroutine currentDragged;
      
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (currentDragged != null)
+        if(notInteractable == false)
         {
-            
-            StopCoroutine(currentDragged);
-            touchable = true;
+            if (currentDragged != null)
+            {
 
+                StopCoroutine(currentDragged);
+                touchable = true;
+
+            }
+            if (touchable)
+            {
+                Debug.Log("You found me");
+                holding = true;
+                currentDragged = StartCoroutine(Dragged());
+            }
         }
-        if (touchable)
-        {
-            Debug.Log("You found me");
-            holding = true;
-            currentDragged = StartCoroutine(Dragged());
-        }
+       
        
         
     }
@@ -40,6 +45,11 @@ public class DragObject : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         holding = false;
        
         
+    }
+
+    public void ForceUp()
+    {
+        holding = false;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
