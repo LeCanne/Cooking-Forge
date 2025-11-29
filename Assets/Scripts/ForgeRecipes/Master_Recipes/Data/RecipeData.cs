@@ -4,8 +4,8 @@ using UnityEngine;
 public class RecipeData 
 {
     public Weapon WeaponObject;
-    [SerializeField] public float cost;
-    [SerializeField] public float reward;
+    [SerializeField] public ResourceData resourceCost;
+    [SerializeField] public int recipeCost;
     [SerializeField] public float difficulty;
     [SerializeField] public MinigameObject[] minigames;
     

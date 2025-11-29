@@ -8,13 +8,16 @@ public class PNJ_Commissioner : MonoBehaviour
     public int commissionNumber;
     SpriteRenderer spriteRenderer;
     CommissionData commissionData;
+    int currentReward;
 
     [HideInInspector]public UnityEvent<int> commissionDone = new UnityEvent<int>();
 
 
     private void Awake()
     {
+      
         spriteRenderer = GetComponent<SpriteRenderer>();
+      
         
         
 
@@ -23,6 +26,7 @@ public class PNJ_Commissioner : MonoBehaviour
     public void InitializeCommissioner()
     {
         commissionData = commissioner.CommissionerData.commision.data;
+        currentReward = commissionData.moneyBonus;
         //spriteRenderer.sprite = commissioner.CommissionerData.sprite;
     }
     
@@ -50,6 +54,11 @@ public class PNJ_Commissioner : MonoBehaviour
         if( commissionData.weapon.WeaponData.weaponType == weaponData.weaponType)
         {
             Debug.Log("GoodType");
+            
+        }
+        else
+        {
+            currentReward -= 5;
         }
 
         if (commissionData.weapon.WeaponData.WeaponName == weaponData.weaponName)

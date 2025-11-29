@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
   recipeData:
     WeaponObject: {fileID: 11400000, guid: 6670430d6ebf6b04c86e566fd1124e3c, type: 2}
-    cost: 0
-    reward: 0
+    resourceCost:
+      gold: 10
+      silver: 10
+      copper: 15
+    recipeCost: 55
     difficulty: 0
     minigames:
     - {fileID: 11400000, guid: 47a3942ac32a1df40b78dd6ffb95a8be, type: 2}
