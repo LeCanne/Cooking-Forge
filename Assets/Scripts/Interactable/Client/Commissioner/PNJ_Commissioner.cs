@@ -58,20 +58,31 @@ public class PNJ_Commissioner : MonoBehaviour
             if (commissionData.weapon.WeaponData.weaponType == weaponData.weaponData.weaponType)
             {
                 Debug.Log("GoodType");
-                commissionDone.Invoke(commissionNumber + 1);
+                PlayerResourcesHandler.Instance.money += weaponData.value;
             }
+            else
+            {
+                PlayerResourcesHandler.Instance.money += Mathf.RoundToInt(weaponData.value * 0.5f);
+            }
+            commissionDone.Invoke(commissionNumber + 1);
         }
         else if(commissionData.type == CommissionData.COMMISSIONTYPE.Material)
         {
             if (commissionData.weapon.WeaponData.material == weaponData.weaponData.material)
             {
                 Debug.Log("GoodMaterial");
-                commissionDone.Invoke(commissionNumber + 1);
+                PlayerResourcesHandler.Instance.money += weaponData.value;
             }
+            else
+            {
+                PlayerResourcesHandler.Instance.money += Mathf.RoundToInt(weaponData.value * 0.5f);
+            }
+            commissionDone.Invoke(commissionNumber + 1);
         }
         else if(commissionData.type == CommissionData.COMMISSIONTYPE.Both) 
         {
             int goodToken = 0;
+           
             if (commissionData.weapon.WeaponData.weaponType == weaponData.weaponData.weaponType)
             {
 
@@ -86,10 +97,21 @@ public class PNJ_Commissioner : MonoBehaviour
                 
             }
 
-            if (goodToken == 2)
+            switch (goodToken)
             {
-                commissionDone.Invoke(commissionNumber + 1);
+                case 0:
+                    PlayerResourcesHandler.Instance.money += Mathf.RoundToInt(weaponData.value * 0.25f);
+                    break;
+
+                case 1:
+                    PlayerResourcesHandler.Instance.money += Mathf.RoundToInt(weaponData.value * 0.5f);
+                    break;
+                case 2:
+                    PlayerResourcesHandler.Instance.money += weaponData.value;
+                    break;
             }
+
+                commissionDone.Invoke(commissionNumber + 1);
         }  
        
     }
