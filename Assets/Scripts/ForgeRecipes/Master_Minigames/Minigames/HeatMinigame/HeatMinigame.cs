@@ -15,6 +15,7 @@ public class HeatMinigame : ForgeMinigame
     //HandleHeat
     [Range (0,1)]public float heat;
     public float heatSpeed;
+  
 
     //HandleDesiredHeat
     [Range (0,1)]public float minHeat;
@@ -117,9 +118,25 @@ public class HeatMinigame : ForgeMinigame
 
     IEnumerator Done()
     {
+       
+
+
         currentLerp = StartCoroutine(LerpToPos(basePos.transform.position));
         StopCoroutine(currentLerp);
         yield return new WaitForSeconds(1f);
+        Debug.Log(heat);
+        if (heat > maxHeat)
+        {
+            quality = 0;
+        }
+        else if (heat < minHeat)
+        {
+            quality = 0.5f;
+        }
+        else
+        {
+            quality = 1;
+        }
         Success();
     }
 

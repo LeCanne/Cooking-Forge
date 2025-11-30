@@ -12,7 +12,7 @@ public class RecipesHandler: MonoBehaviour
     private List<ForgeMinigame> _minigames = new List<ForgeMinigame>();
     public UnityEvent NextMinigame = new UnityEvent();
     public UnityEvent MinigamesOver = new UnityEvent();
-    [HideInInspector]public UnityEvent<RecipeData, int> broadcastResult = new UnityEvent<RecipeData,int>();
+    [HideInInspector]public UnityEvent<RecipeData, float> broadcastResult = new UnityEvent<RecipeData,float>();
    
 
     private static RecipesHandler _instance;
@@ -61,7 +61,8 @@ public class RecipesHandler: MonoBehaviour
 
     IEnumerator MinigameProcess(Recipe recipeObject)
     {
-        int quality = 0;
+        List<float> qualities = new List<float>();
+        
         forgeMinigame = recipeObject.recipeData.minigames;
         //Assign GameObjects associated to prefab scripts to list
         //Then, spawn clones of minigames via their GameObject.
@@ -82,6 +83,7 @@ public class RecipesHandler: MonoBehaviour
         {
             mg.gameObject.SetActive(true);
             yield return StartCoroutine(WaitUntilEvent(NextMinigame));
+            qualities.Add(mg.quality);
             mg.gameObject.SetActive(false);
             Debug.Log("completed");
         }
@@ -96,12 +98,19 @@ public class RecipesHandler: MonoBehaviour
 
         Debug.Log("AllMinigamesDone");
         MinigamesOver.Invoke();
-        RecipeResult(recipeObject.recipeData, quality);
+        RecipeResult(recipeObject.recipeData, qualities);
         yield return null;
     }
 
-    void RecipeResult(RecipeData recipe, int quality)
+    void RecipeResult(RecipeData recipe, List<float> qualities)
     {
+        float totalQuality = 0;
+        foreach (float i in qualities)
+        {
+            totalQuality += i;
+        }
+        float quality = totalQuality / qualities.Count;
+        
         broadcastResult.Invoke(recipe, quality);
     }
 

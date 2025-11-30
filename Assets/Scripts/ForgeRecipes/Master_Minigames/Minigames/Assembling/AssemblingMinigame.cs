@@ -70,6 +70,7 @@ public class AssemblingMinigame : ForgeMinigame
         token += 1;
         if (token == maxToken)
         {
+            quality = 1;
             StartCoroutine(Lapse());
         }
         

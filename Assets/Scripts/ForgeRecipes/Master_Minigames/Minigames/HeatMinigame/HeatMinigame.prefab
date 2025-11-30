@@ -70,7 +70,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0.653
+  m_FillAmount: 0.63
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0.21200001
+  m_FillAmount: 0.16000003
   m_FillClockwise: 1
   m_FillOrigin: 1
   m_UseSpriteMesh: 0
@@ -714,15 +714,17 @@ MonoBehaviour:
   MinigameComplete:
     m_PersistentCalls:
       m_Calls: []
+  weaponObject: {fileID: 0}
   difficulty: 0
+  quality: 0
   lerpSpeed: 8
   ovenPos: {fileID: 2214391493880938052}
   basePos: {fileID: 7824765661612444537}
   metalShard: {fileID: 8833394073857245081}
   heat: 0
   heatSpeed: 0.5
-  minHeat: 0.653
-  maxHeat: 0.788
+  minHeat: 0.63
+  maxHeat: 0.84
   ValueChanged:
     m_PersistentCalls:
       m_Calls: []

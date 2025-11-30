@@ -7,12 +7,14 @@ public class HammerMinigame : ForgeMinigame
     public float speed;
     [Range(0.0f,0.2f)]public float offsetResolution;
     int slamNumber;
+    public int maxSlamNumber;
 
     [Range(0,1)]public float barPosition;
     public float barWidth;
     
     private void OnEnable()
     {
+        quality = 1;
         PlayerControlsHandler.Instance.Touch += HammerSlam;
        ChangeBarLocation();
     }
@@ -53,12 +55,15 @@ public class HammerMinigame : ForgeMinigame
         if (power > minpos && power < maxpos)
         {
             Debug.Log("SLAM");
-
         }
-        slamNumber += 1;
+        else
+        {
+            quality -= 1 / maxSlamNumber;
+        }
+            slamNumber += 1;
         ChangeBarLocation();
 
-        if (slamNumber >= 3)
+        if (slamNumber >= maxSlamNumber)
         {
             PlayerControlsHandler.Instance.Touch -= HammerSlam;
             Success();

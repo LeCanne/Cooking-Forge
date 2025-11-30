@@ -8,6 +8,7 @@ public class PNJ_Commissioner : MonoBehaviour
     public int commissionNumber;
     SpriteRenderer spriteRenderer;
     CommissionData commissionData;
+    public EconomyData economyData;
     int currentReward;
 
     [HideInInspector]public UnityEvent<int> commissionDone = new UnityEvent<int>();
@@ -26,7 +27,7 @@ public class PNJ_Commissioner : MonoBehaviour
     public void InitializeCommissioner()
     {
         commissionData = commissioner.CommissionerData.commision.data;
-        currentReward = commissionData.moneyBonus;
+        
         //spriteRenderer.sprite = commissioner.CommissionerData.sprite;
     }
     
@@ -36,7 +37,7 @@ public class PNJ_Commissioner : MonoBehaviour
         if (collision.TryGetComponent<WeaponObject>(out WeaponObject finishedObject)) 
         {
             //Checks the commission and does a behavior
-            ValidateCommission(finishedObject);
+            EvaluateCommission(finishedObject);
             
 
             //Clears the Commissioner and the Commission
@@ -49,26 +50,47 @@ public class PNJ_Commissioner : MonoBehaviour
 
 
     //Compares data of the commission with the data of the finished object.
-    void ValidateCommission(WeaponObject weaponData)
+    void EvaluateCommission(WeaponObject weaponData)
     {
-        if( commissionData.weapon.WeaponData.weaponType == weaponData.weaponType)
+         
+        if(commissionData.type == CommissionData.COMMISSIONTYPE.Equipment)
         {
-            Debug.Log("GoodType");
-            
+            if (commissionData.weapon.WeaponData.weaponType == weaponData.weaponData.weaponType)
+            {
+                Debug.Log("GoodType");
+                commissionDone.Invoke(commissionNumber + 1);
+            }
         }
-        else
+        else if(commissionData.type == CommissionData.COMMISSIONTYPE.Material)
         {
-            currentReward -= 5;
+            if (commissionData.weapon.WeaponData.material == weaponData.weaponData.material)
+            {
+                Debug.Log("GoodMaterial");
+                commissionDone.Invoke(commissionNumber + 1);
+            }
         }
+        else if(commissionData.type == CommissionData.COMMISSIONTYPE.Both) 
+        {
+            int goodToken = 0;
+            if (commissionData.weapon.WeaponData.weaponType == weaponData.weaponData.weaponType)
+            {
 
-        if (commissionData.weapon.WeaponData.WeaponName == weaponData.weaponName)
-        {
-            Debug.Log("GoodName");
-        }
+                Debug.Log("GoodType");
+                goodToken += 1;
+               
+            }
+            if (commissionData.weapon.WeaponData.material == weaponData.weaponData.material)
+            {
+                Debug.Log("GoodMaterial");
+                goodToken += 1;
+                
+            }
 
-        commissionDone.Invoke(commissionNumber+1);
-        Debug.Log("EndCommission");
-        
+            if (goodToken == 2)
+            {
+                commissionDone.Invoke(commissionNumber + 1);
+            }
+        }  
        
     }
 }

@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnWeapon
   spriteTest: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  economy: {fileID: 11400000, guid: cf5210857c2cf0d448cb8a56e57be261, type: 2}
 --- !u!212 &21773757
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1511,7 +1512,7 @@ MonoBehaviour:
     gold: 10
     silver: 10
     copper: 15
-  money: 0
+  money: 10000
 --- !u!4 &1024649580
 Transform:
   m_ObjectHideFlags: 0

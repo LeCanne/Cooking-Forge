@@ -319,7 +319,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b86bafe20d59664a9d709e8b863eb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PNJ_Commissioner
-  commission: {fileID: 11400000, guid: 2e4beac489adcef44a85e72e8b8e6149, type: 2}
+  commissioner: {fileID: 0}
+  commissionNumber: 0
+  economyData: {fileID: 11400000, guid: cf5210857c2cf0d448cb8a56e57be261, type: 2}
+  commissionDone:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1202175267173535645
 BoxCollider2D:
   m_ObjectHideFlags: 0
