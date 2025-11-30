@@ -1512,7 +1512,7 @@ MonoBehaviour:
     gold: 10
     silver: 10
     copper: 15
-  money: 10000
+  money: 55
 --- !u!4 &1024649580
 Transform:
   m_ObjectHideFlags: 0
