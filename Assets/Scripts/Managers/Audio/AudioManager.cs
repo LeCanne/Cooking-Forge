@@ -11,18 +11,38 @@ public class AudioManager : MonoBehaviour
     public bool isMenu;
 
     [Header("SFX")]
-    public AudioSource sfxButton;
+    public AudioSource sfxPlay; 
+    public AudioSource sfxPlayDay;
     public AudioSource sfxMoney;
+    public AudioSource sfxBuy;
+    public AudioSource sfxButton;
+
+    public AudioSource sfxMaterialsChoice;
+    public AudioSource sfxMaterialsGet;
+    public AudioSource sfxBook;
+
+    public AudioSource sfxFournaise;
+    public AudioSource[] sfxHammer;
+    public AudioSource sfxGrab;
+    public AudioSource sfxPolish;
 
     [Header("Mixer")]
     public AudioMixer mixer;
-    public float volume;
+    public float volumeMusic, volumeSFX;
     public Slider musicSlider, sfxSlider;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        PlayMenu();
+        if (PlayerPrefs.HasKey("MusicVolume"))
+        {
+            LoadVolume();
+        }
+        else
+        {
+            musicSlider.value = 0.5f;
+            sfxSlider.value = 0.5f;
+        }
     }
 
     private void Update()
@@ -59,35 +79,55 @@ public class AudioManager : MonoBehaviour
 
     // Pour les SFX et Jingle joués par les autres script. CHARLES
     #region SFX/Jingle
-    public void PlayButton()
+    // Jingle joué par le bouton "Play". CHARLES
+    public void GetPlaySound()
     {
-        musicMenu.Play();
+        sfxPlayDay.Play();
     }
 
-    public void PlayMoney()
+    // Jingle joué par les boutons " Play Day XX" et "Start Day". CHARLES
+    public void GetPlayDaySound()
+    {
+        sfxPlayDay.Play();
+    }
+
+    // SFX joué quand le client nous donne de l'argent ou quand on achète/upgrade dans le shop. CHARLES
+    public void GetMoneySound()
+    {
+        sfxMoney.Play();
+    }
+
+    // SFX joué quand le client nous donne de l'argent ou quand on achète/upgrade dans le shop. CHARLES
+    public void GetBuySound()
     {
         musicLevel.Play();
     }
 
-    public void PlayDay()
-    {
-        musicShop.Play();
-    }
     #endregion
 
     // Pour les paramètres audio. CHARLES
     // Il faudra donner les valeurs des paramètres. CHARLES
     // A savoir que le volume normal est de 0 dB, la plus basse est de -80 dB tandis que le maximum est de 20 dB (il faut faire attention cela peut saturer). CHARLES
-    // Pour l'instant, j'ai mis dans les slides -50 à 10. CHARLES
+    // Pour répondre à ce problème, j'ai utiliser un logarithme pour mieux gérer le volume du son. CHARLES
+    // On va aussi sauvegarder les stats des sliders. CHARLES
     #region Mixer
     public void SetMusicVolume(float volume)
     {
-        mixer.SetFloat("MusicVolume", volume);
+        mixer.SetFloat("MusicVolume", Mathf.Log10(volume)*20);
+        PlayerPrefs.SetFloat("MusicVolume", volume);
     }
 
     public void SetSFXVolume(float volume)
     {
-        mixer.SetFloat("SFXVolume", volume);
+        mixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+    }
+
+    // Charger les données sauvegardées au Sliders. CHARLES
+    public void LoadVolume()
+    {
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+        sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume");
     }
     #endregion
 }
