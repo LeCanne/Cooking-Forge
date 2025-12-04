@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -6,25 +7,38 @@ public class AudioManager : MonoBehaviour
 {
     [Header("Music")]
     public AudioSource musicMenu;
-    public AudioSource musicLevel;
+    public AudioSource musicLevelIntro, musicLevelLoop;
     public AudioSource musicShop;
-    public bool isMenu;
+    public AudioSource musicEnding;
 
     [Header("SFX")]
-    public AudioSource sfxPlay; 
-    public AudioSource sfxPlayDay;
-    public AudioSource sfxMoney;
-    public AudioSource sfxBuy;
-    public AudioSource sfxButton;
+    public SFX sfx;
 
-    public AudioSource sfxMaterialsChoice;
-    public AudioSource sfxMaterialsGet;
-    public AudioSource sfxBook;
+    [System.Serializable]
+    public class SFX
+    {
+        [Header("UI")]
+        public AudioSource sfxPlay;
+        public AudioSource sfxPlayDay;
+        public AudioSource sfxBuy;
+        public AudioSource sfxButton;
+        public AudioSource sfxButtonBook;
 
-    public AudioSource sfxFournaise;
-    public AudioSource[] sfxHammer;
-    public AudioSource sfxGrab;
-    public AudioSource sfxPolish;
+        [Header("Level")]
+        public AudioSource sfxMaterialsChoice;
+        public AudioSource sfxMaterialsGet;
+        public AudioSource sfxBook;
+        public AudioSource sfxMoney;
+
+        [Header("Forge")]
+        public AudioSource sfxFournaise;
+        public AudioSource[] sfxHammer;
+        public AudioSource sfxPolish;
+        public AudioSource sfxGrab;
+        public AudioSource[] sfxResult;
+    }
+
+    private bool isPlay;
 
     [Header("Mixer")]
     public AudioMixer mixer;
@@ -57,53 +71,160 @@ public class AudioManager : MonoBehaviour
     public void PlayMenu()
     {
         musicMenu.Play();
-        musicLevel.Stop();
+        musicLevelIntro.Stop();
+        musicLevelLoop.Stop();
         musicShop.Stop();
+        musicEnding.Stop();
     }
 
     // Jouée après le shop. CHARLES
     public void PlayLevel()
     {
-        musicLevel.Play();
+        musicLevelIntro.Play();
         musicShop.Stop();
+
+        StartCoroutine(GetLevelLoop());
     }
 
-    // Jouée aprèss un niveau ou après l'écran de démarage. CHARLES
+    public IEnumerator GetLevelLoop()
+    {
+        yield return new WaitForSeconds(1f);
+        musicLevelLoop.Play();
+    }
+
+    // Jouée après un niveau ou après l'écran de démarage. CHARLES
     public void PlayShop()
     {
         musicShop.Play();
-        musicLevel.Stop();
+        musicLevelIntro.Stop();
+        musicLevelLoop.Stop();
         musicMenu.Stop();
+    }
+
+    // Jouée à la fin du jeu. CHARLES
+    public void PlayEnding()
+    {
+        musicShop.Stop();
+        musicLevelIntro.Stop();
+        musicLevelLoop.Stop();
+        musicMenu.Stop();
+        musicEnding.Play();
     }
     #endregion
 
+
     // Pour les SFX et Jingle joués par les autres script. CHARLES
     #region SFX/Jingle
+
+    #region UI
     // Jingle joué par le bouton "Play". CHARLES
     public void GetPlaySound()
     {
-        sfxPlayDay.Play();
+        sfx.sfxPlayDay.Play();
     }
 
     // Jingle joué par les boutons " Play Day XX" et "Start Day". CHARLES
     public void GetPlayDaySound()
     {
-        sfxPlayDay.Play();
+        sfx.sfxPlayDay.Play();
+    }
+
+    // Jingle joué quand on achète/upgrade dans le shop (avec le son de l'argent). CHARLES
+    public void GetBuySound()
+    {
+        sfx.sfxBuy.Play();
+        sfx.sfxMoney.Play();
+    }
+
+    // SFX quand on appuie sur les boutons "Setting", "Upgrades", "Blueprints", "Resume", "Restart Day" et "To Main Menu" (en gros tout les boutons un peu basiquess). CHARLES
+    public void GetButtonSound()
+    {
+        sfx.sfxButton.Play();
+    }
+
+    // Jingle joué quand on achète/upgrade dans le shop. CHARLES
+    public void GetButtonBookSound()
+    {
+        sfx.sfxButtonBook.Play();
+    }
+    #endregion
+
+    #region Level
+    // SFX joué quand on choisi dans le livre des recettes. CHARLES
+    public void GetMaterialsChoiceSound()
+    {
+        sfx.sfxMaterialsChoice.Play();
+    }
+
+    // SFX joué quand on reçoit les matériaux gratuits. CHARLES
+    public void GetMaterialsFreeSound()
+    {
+        sfx.sfxMaterialsGet.Play();
+    }
+
+    // SFX joué quand on ouvre le livre des recettes. CHARLES
+    public void GetMBookSound()
+    {
+        sfx.sfxBook.Play();
     }
 
     // SFX joué quand le client nous donne de l'argent ou quand on achète/upgrade dans le shop. CHARLES
     public void GetMoneySound()
     {
-        sfxMoney.Play();
+        sfx.sfxMoney.Play();
+    }
+    #endregion
+
+    #region Forge
+    // SFX joué en loop jusqu'à qu'on finit l'étape 1. CHARLES
+    public void GetFournaiseSound()
+    {
+        isPlay = !isPlay;
+
+        if (isPlay)
+            sfx.sfxFournaise.Play();
+        else
+            sfx.sfxFournaise.Stop();
     }
 
-    // SFX joué quand le client nous donne de l'argent ou quand on achète/upgrade dans le shop. CHARLES
-    public void GetBuySound()
+    // SFX joué quand on touche l'écran pour frapper le métal dans l'étape 2. CHARLES
+    public void GetHammerSound()
     {
-        musicLevel.Play();
+        int nbHammer = Random.Range(0,4);
+        sfx.sfxHammer[nbHammer].Play();
     }
+
+    // SFX joué dans l'étape 3 en loop quand on appuie sur l'écran pour polir la lame et qui s'arrête quand on relache le doigt. CHARLES
+    public void GetPolishSound()
+    {
+        isPlay = !isPlay;
+
+        if (isPlay)
+            sfx.sfxPolish.Play();
+        else
+            sfx.sfxPolish.Stop();
+    }
+
+    // SFX joué dans l'étape 4 quand on drag'n'drop les différentes parties de l'outil/arme. CHARLES
+    public void GetGrabSound()
+    {
+        sfx.sfxGrab.Play();
+    }
+
+    // Jingle joué dans l'étape 4 quand on a tout assemblé. CHARLES
+    public void GetResultSound(float quality)
+    {
+        if (quality < 0.5f)
+            sfx.sfxResult[0].Play();
+        else if (quality < 0.75f && quality >= 0.5f)
+            sfx.sfxResult[1].Stop();
+        else if (quality > 0.75f)
+            sfx.sfxResult[2].Play();
+    }
+    #endregion
 
     #endregion
+
 
     // Pour les paramètres audio. CHARLES
     // Il faudra donner les valeurs des paramètres. CHARLES
