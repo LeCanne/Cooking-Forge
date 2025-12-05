@@ -25,6 +25,10 @@ public class AudioManager : MonoBehaviour
         public AudioSource sfxButtonBook;
 
         [Header("Level")]
+        public AudioSource[] sfxAmbiance;
+        public AudioSource sfxLevelBells;
+        public AudioSource sfxCoq;
+        public AudioSource sfxOwls;
         public AudioSource sfxMaterialsChoice;
         public AudioSource sfxMaterialsGet;
         public AudioSource sfxBook;
@@ -36,6 +40,9 @@ public class AudioManager : MonoBehaviour
         public AudioSource sfxPolish;
         public AudioSource sfxGrab;
         public AudioSource[] sfxResult;
+
+        [Header("Shop")]
+        public AudioSource sfxShopBells;
     }
 
     private bool isPlay;
@@ -136,7 +143,7 @@ public class AudioManager : MonoBehaviour
         sfx.sfxMoney.Play();
     }
 
-    // SFX quand on appuie sur les boutons "Setting", "Upgrades", "Blueprints", "Resume", "Restart Day" et "To Main Menu" (en gros tout les boutons un peu basiquess). CHARLES
+    // SFX quand on appuie sur les boutons "Setting", "Upgrades", "Blueprints", "Resume", "Restart Day" et "To Main Menu" (en gros tout les boutons un peu basiques). CHARLES
     public void GetButtonSound()
     {
         sfx.sfxButton.Play();
@@ -150,6 +157,87 @@ public class AudioManager : MonoBehaviour
     #endregion
 
     #region Level
+    // Ambiance du matin jouée dès qu'on apparaît dans l'écran du niveau. CHARLES
+    public void GetAmbianceMorningSound()
+    {
+        sfx.sfxAmbiance[0].Play();
+        sfx.sfxAmbiance[1].Play();
+
+        sfx.sfxLevelBells.Play();
+        sfx.sfxCoq.Play();
+
+        StartCoroutine(GetLerpMorning());
+    }
+    // Lerp du volume du matin
+    public IEnumerator GetLerpMorning()
+    {
+        float time = 0;
+        
+        while (time > 4)
+        {
+            sfx.sfxAmbiance[0].volume = Mathf.Lerp(0, 1, 4/time);
+            sfx.sfxAmbiance[1].volume = Mathf.Lerp(0, 1, 4/time);
+            time += Time.deltaTime;
+        }
+
+        yield return null;
+    }
+
+    // Ambiance du midi jouée après avoir fini la commission du matin ou avoir rejeter cette commission. CHARLES
+    public void GetAmbianceEveningSound()
+    {
+        sfx.sfxAmbiance[2].Play();
+        sfx.sfxAmbiance[0].Stop();
+
+        sfx.sfxLevelBells.Stop();
+        sfx.sfxCoq.Stop();
+
+        StartCoroutine(GetLerpEvening());
+        StopCoroutine(GetLerpMorning());
+    }
+    // Lerp du volume midi
+    public IEnumerator GetLerpEvening()
+    {
+        float time = 0;
+
+        while (time > 4)
+        {
+            sfx.sfxAmbiance[2].volume = Mathf.Lerp(0, 1, 4 / time);
+            time += Time.deltaTime;
+        }
+
+        yield return null;
+    }
+
+    // Ambiance du soir jouée après avoir fini la commission du midi ou avoir rejeter cette commission. CHARLES
+    public void GetAmbianceNightSound()
+    {
+        sfx.sfxAmbiance[3].Play();
+        sfx.sfxAmbiance[2].Stop();
+
+        StartCoroutine(GetLerpNight());
+        StopCoroutine(GetLerpEvening());
+    }
+    // Lerp du volume du soir
+    public IEnumerator GetLerpNight()
+    {
+        float time = 0;
+
+        while (time > 4)
+        {
+            sfx.sfxAmbiance[3].volume = Mathf.Lerp(0, 1, 4 / time);
+            time += Time.deltaTime;
+        }
+
+        yield return null;
+    }
+
+    // SFX joué quand on choisi dans le livre des recettes. CHARLES
+    public void GetOwlsSound()
+    {
+        sfx.sfxMaterialsChoice.Play();
+    }
+
     // SFX joué quand on choisi dans le livre des recettes. CHARLES
     public void GetMaterialsChoiceSound()
     {
