@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource musicShop;
     public AudioSource musicEnding;
 
-    [Header("SFX")]
+    [Header("SFX/Jingle")]
     public SFX sfx;
 
     [System.Serializable]
@@ -28,16 +29,19 @@ public class AudioManager : MonoBehaviour
         public AudioSource[] sfxAmbiance;
         public AudioSource sfxLevelBells;
         public AudioSource sfxCoq;
-        public AudioSource sfxOwls;
+        public AudioSource[] sfxOwls;
         public AudioSource sfxMaterialsChoice;
         public AudioSource sfxMaterialsGet;
         public AudioSource sfxBook;
         public AudioSource sfxMoney;
+        public AudioSource sfxFinish;
+
+        public bool isNight;
 
         [Header("Forge")]
         public AudioSource sfxFournaise;
         public AudioSource[] sfxHammer;
-        public AudioSource sfxPolish;
+        public AudioSource[] sfxPolish;
         public AudioSource sfxGrab;
         public AudioSource[] sfxResult;
 
@@ -70,6 +74,8 @@ public class AudioManager : MonoBehaviour
     {
         SetMusicVolume(musicSlider.value);
         SetSFXVolume(sfxSlider.value);
+
+
     }
 
     // Pour les musiques jouées par les autres script. CHARLES
@@ -232,10 +238,12 @@ public class AudioManager : MonoBehaviour
         yield return null;
     }
 
-    // SFX joué quand on choisi dans le livre des recettes. CHARLES
+    // SFX joué durant la nuit. CHARLES
     public void GetOwlsSound()
     {
-        sfx.sfxMaterialsChoice.Play();
+        int nbOwl = Random.Range(0, 3);
+
+        sfx.sfxOwls[nbOwl].Play();
     }
 
     // SFX joué quand on choisi dans le livre des recettes. CHARLES
@@ -261,6 +269,12 @@ public class AudioManager : MonoBehaviour
     {
         sfx.sfxMoney.Play();
     }
+
+    // Jingle joué à la fin d'un niveau. CHARLES
+    public void GetFinishSound()
+    {
+        sfx.sfxFinish.Play();
+    }
     #endregion
 
     #region Forge
@@ -282,15 +296,26 @@ public class AudioManager : MonoBehaviour
         sfx.sfxHammer[nbHammer].Play();
     }
 
-    // SFX joué dans l'étape 3 en loop quand on appuie sur l'écran pour polir la lame et qui s'arrête quand on relache le doigt. CHARLES
-    public void GetPolishSound()
+    // SFX joué en loop jusqu'à qu'on finit l'étape 3. CHARLES
+    public void GetPolishOffSound()
     {
         isPlay = !isPlay;
 
         if (isPlay)
-            sfx.sfxPolish.Play();
+            sfx.sfxPolish[0].Play();
         else
-            sfx.sfxPolish.Stop();
+            sfx.sfxPolish[0].Stop();
+    }
+
+    // SFX joué dans l'étape 3 en loop quand on appuie sur l'écran pour polir la lame et qui s'arrête quand on relache le doigt. CHARLES
+    public void GetPolishONSound()
+    {
+        isPlay = !isPlay;
+
+        if (isPlay)
+            sfx.sfxPolish[1].Play();
+        else
+            sfx.sfxPolish[1].Stop();
     }
 
     // SFX joué dans l'étape 4 quand on drag'n'drop les différentes parties de l'outil/arme. CHARLES
