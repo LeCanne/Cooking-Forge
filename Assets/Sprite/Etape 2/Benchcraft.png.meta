@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a69fba5cbcaca9d4b871ed9bae71c831
+guid: 8fca8ee4f81ebc04d86e9eb47e6c3e7f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5584577957496112472
-    second: "Anvil \xE9tape 2 (top cut)_0"
+      213: -3659487386862127266
+    second: Benchcraft_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Anvil \xE9tape 2 (top cut)_0"
+      name: Benchcraft_0
       rect:
         serializedVersion: 2
-        x: 142
+        x: 85
         y: 0
-        width: 1475
-        height: 673
-      alignment: 9
-      pivot: {x: 0.57147545, y: 0.49078515}
+        width: 1670
+        height: 991
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8aab7fe9fe79f72b0800000000000000
-      internalID: -5584577957496112472
+      spriteID: e577f064c93e63dc0800000000000000
+      internalID: -3659487386862127266
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: dbd2c38136e774a4cac3b26d4f59b4a9
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Anvil \xE9tape 2 (top cut)_0": -5584577957496112472
+      Benchcraft_0: -3659487386862127266
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
