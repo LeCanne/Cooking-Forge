@@ -16,7 +16,7 @@ public class DropdownMenu : MonoBehaviour
     float maximumHeight;
 
     //From upper part
-    private float offsetRect;
+    public float offsetRect;
     public float lerpDuration;
     public GameObject rects;
 
@@ -60,7 +60,7 @@ public class DropdownMenu : MonoBehaviour
         {
             rectTransform.sizeDelta = new Vector2(rectTransform.rect.width, childHeight);
         }
-        offsetRect = childHeight;
+        offsetRect = childHeight * 0.5f;
         minspacing = -childHeight;
 
         ResizeSpacing();
