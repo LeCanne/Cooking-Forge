@@ -3330,11 +3330,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6329730024700395190, guid: bad01741491af624bbeed47ecd4d4ecf, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 6a9627e12bf6f714f876e943ccd38064, type: 3}
+  m_Resource: {fileID: 8300000, guid: 1b37b72271a257a43aaf7651391efd12, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3459,9 +3459,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6329730024700395190, guid: bad01741491af624bbeed47ecd4d4ecf, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 5040ff54a68561744be78c6643ad7867, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4696,9 +4696,11 @@ MonoBehaviour:
   musicLevelLoop: {fileID: 2588228651255241041}
   musicShop: {fileID: 1482710746530150153}
   musicEnding: {fileID: 7358326061612291029}
+  isLevel: 0
+  mTime: 0
   sfx:
     sfxPlay: {fileID: 729192002380695145}
-    sfxPlayDay: {fileID: 0}
+    sfxPlayDay: {fileID: 4518224597467605386}
     sfxBuy: {fileID: 626128756104136005}
     sfxButton: {fileID: 7738016424046921152}
     sfxButtonBook: {fileID: 8430821043454649496}

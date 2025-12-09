@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 public class UIElement : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public UnityEvent OnAct;
+    public AudioManager audioManager;
+
     public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("Bonsoir");

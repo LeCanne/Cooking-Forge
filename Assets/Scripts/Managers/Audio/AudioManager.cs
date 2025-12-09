@@ -12,6 +12,9 @@ public class AudioManager : MonoBehaviour
     public AudioSource musicShop;
     public AudioSource musicEnding;
 
+    public bool isLevel;
+    public float mTime;
+
     [Header("SFX/Jingle")]
     public SFX sfx;
 
@@ -68,6 +71,8 @@ public class AudioManager : MonoBehaviour
             musicSlider.value = 0.5f;
             sfxSlider.value = 0.5f;
         }
+
+        PlayLevel();
     }
 
     private void Update()
@@ -75,7 +80,11 @@ public class AudioManager : MonoBehaviour
         SetMusicVolume(musicSlider.value);
         SetSFXVolume(sfxSlider.value);
 
-
+        if (musicLevelIntro.time >= 4.6f && isLevel)
+        {
+            musicLevelLoop.Play();
+            isLevel = false;
+        }
     }
 
     // Pour les musiques jouées par les autres script. CHARLES
@@ -96,13 +105,9 @@ public class AudioManager : MonoBehaviour
         musicLevelIntro.Play();
         musicShop.Stop();
 
-        StartCoroutine(GetLevelLoop());
-    }
+        isLevel = true;
 
-    public IEnumerator GetLevelLoop()
-    {
-        yield return new WaitForSeconds(1f);
-        musicLevelLoop.Play();
+        //StartCoroutine(GetLevelLoop());
     }
 
     // Jouée après un niveau ou après l'écran de démarage. CHARLES
@@ -139,7 +144,7 @@ public class AudioManager : MonoBehaviour
     // Jingle joué par les boutons " Play Day XX" et "Start Day". CHARLES
     public void GetPlayDaySound()
     {
-        sfx.sfxPlayDay.Play();
+        sfx.sfxPlay.Play();
     }
 
     // Jingle joué quand on achète/upgrade dans le shop (avec le son de l'argent). CHARLES
@@ -333,6 +338,14 @@ public class AudioManager : MonoBehaviour
             sfx.sfxResult[1].Stop();
         else if (quality > 0.75f)
             sfx.sfxResult[2].Play();
+    }
+    #endregion
+
+    #region Shop
+    // SFX joué quand on arrive au shop. CHARLES
+    public void GetShopBellsSound()
+    {
+        sfx.sfxShopBells.Play();
     }
     #endregion
 
