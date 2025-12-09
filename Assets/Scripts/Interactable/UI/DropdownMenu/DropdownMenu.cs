@@ -34,6 +34,12 @@ public class DropdownMenu : MonoBehaviour
 
     private void Awake()
     {
+        //InitializeDropDown();
+    }
+
+    public void InitializeDropDown()
+    {
+
         SizeContainers();
         originalHeight = gameObject.GetComponent<RectTransform>().sizeDelta.y;
         vLayout.spacing = minspacing;
@@ -43,7 +49,6 @@ public class DropdownMenu : MonoBehaviour
             Debug.Log(rect.sizeDelta.y);
         }
         maximumHeight += gameObject.GetComponent<RectTransform>().sizeDelta.y + vLayout.padding.top + spacing;
-        
     }
 
 

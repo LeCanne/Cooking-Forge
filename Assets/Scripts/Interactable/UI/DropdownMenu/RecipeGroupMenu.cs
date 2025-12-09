@@ -53,6 +53,8 @@ public class RecipeGroupMenu : MonoBehaviour
         Copper();
         Iron();
         Gold();
+
+        dropDown.InitializeDropDown();
     }
 
     void Copper()
