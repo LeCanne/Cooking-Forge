@@ -43,8 +43,17 @@ public class DropdownMenu : MonoBehaviour
             Debug.Log(rect.sizeDelta.y);
         }
         maximumHeight += gameObject.GetComponent<RectTransform>().sizeDelta.y + vLayout.padding.top + spacing;
-       
+        
     }
+
+
+
+    private void OnDisable()
+    {
+        CloseInstantly();
+    }
+
+
 
 
     private void Update()
@@ -95,6 +104,15 @@ public class DropdownMenu : MonoBehaviour
         currentResizeHeight = StartCoroutine(HeightResize(lerpDuration, maximumHeight, originalHeight));
     }
 
+    void CloseInstantly()
+    {
+        closed = true;
+        vLayout.padding.top = 0;
+        vLayout.spacing = -childHeight;
+        RectTransform transform = gameObject.GetComponent<RectTransform>();
+        transform.sizeDelta = new Vector2(transform.sizeDelta.x, originalHeight);
+    }
+
     public void TriggerBox()
     {
         if(currentVerticalLerp!=null && currentSpacingLerp != null)
@@ -113,10 +131,6 @@ public class DropdownMenu : MonoBehaviour
         }
         closed = !closed;
     }
-
-    
-        
-    
 
     IEnumerator LerpVerticalPadding(float lerpDuration, float minimumValuePadding, float maximumValuePadding)
     {

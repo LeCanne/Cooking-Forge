@@ -84,9 +84,6 @@ public class PlayerControlsHandler : MonoBehaviour, Actions_Player.IPlayerAction
 
     public void OnDrag(InputAction.CallbackContext context)
     { 
-       
-            DragInfo?.Invoke(context.ReadValue<Vector2>());
-            
-        
+         DragInfo?.Invoke(context.ReadValue<Vector2>());     
     }
 }

@@ -33,7 +33,7 @@ public class WeaponSpawner : MonoBehaviour
                 result = data.resourceCost.copper * economy.copperPrice * Mathf.Lerp(economy.penaltyMult, economy.copperMultiplier,percentageResult);
                 break;
             case WeaponData.MATERIAL.silver:
-                result = data.resourceCost.silver * economy.silverPrice * Mathf.Lerp(economy.penaltyMult, economy.silverMultiplier, percentageResult);
+                result = data.resourceCost.iron * economy.silverPrice * Mathf.Lerp(economy.penaltyMult, economy.silverMultiplier, percentageResult);
                 break;
             case WeaponData.MATERIAL.gold:
                 result = data.resourceCost.gold * economy.goldPrice * Mathf.Lerp(economy.penaltyMult, economy.silverMultiplier,percentageResult);

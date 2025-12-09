@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: RecettePelle
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
   recipeData:
-    WeaponObject: {fileID: 0}
-    cost: 1.7
-    reward: 6.69
+    WeaponObject: {fileID: 11400000, guid: 6670430d6ebf6b04c86e566fd1124e3c, type: 2}
+    resourceCost:
+      gold: 0
+      iron: 0
+      copper: 0
     difficulty: 1
     minigames:
     - {fileID: 11400000, guid: cd3e896fe8fc80947b345b34fc5419a2, type: 2}

@@ -10,6 +10,7 @@ public class RecipesHandler: MonoBehaviour
 {
     public MinigameObject[] forgeMinigame;
     private List<ForgeMinigame> _minigames = new List<ForgeMinigame>();
+    public event Action recipeStarted;
     public UnityEvent NextMinigame = new UnityEvent();
     public UnityEvent MinigamesOver = new UnityEvent();
     [HideInInspector]public UnityEvent<RecipeData, float> broadcastResult = new UnityEvent<RecipeData,float>();
@@ -20,7 +21,7 @@ public class RecipesHandler: MonoBehaviour
     {
         get
         {
-            if (_instance == null)
+            if ((object)_instance == null)
             {
                 GameObject gameObject = new GameObject("Recipes Handler");
                 _instance = gameObject.AddComponent<RecipesHandler>();
@@ -44,13 +45,9 @@ public class RecipesHandler: MonoBehaviour
 
     }
 
-    void Start()
-    {
-       
-    }
-
     public void LaunchRecipe(Recipe recipeObject)
     {
+        recipeStarted?.Invoke();
         StartCoroutine(MinigameProcess(recipeObject));
     }
 

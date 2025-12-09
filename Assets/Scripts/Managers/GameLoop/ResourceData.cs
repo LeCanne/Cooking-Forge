@@ -4,6 +4,6 @@ using UnityEngine;
 public class ResourceData 
 {
     public int gold;
-    public int silver;
+    public int iron;
     public int copper;
 }

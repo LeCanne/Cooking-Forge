@@ -49,12 +49,12 @@ public class PlayerResourcesHandler : MonoBehaviour
     public bool Craftable(ResourceData resourceTaken)
     {
         int pCopper = playerResources.copper;
-        int pSilver = playerResources.silver;
+        int pSilver = playerResources.iron;
         int pGold = playerResources.gold;
         int[] playerResourcesIntegers = new int[] {pGold, pSilver, pCopper };
 
         int rCopper = resourceTaken.copper;
-        int rSilver = resourceTaken.silver; 
+        int rSilver = resourceTaken.iron; 
         int rGold = resourceTaken.gold;
         int[] resourceTakenIntegers = new int[] {rGold, rSilver, rCopper};
 
@@ -71,7 +71,7 @@ public class PlayerResourcesHandler : MonoBehaviour
         int newGold = pGold - rGold;
        
         playerResources.copper = newCopper;
-        playerResources.silver = newSilver; 
+        playerResources.iron = newSilver; 
         playerResources.gold = newGold;
         return true;
     }
@@ -79,7 +79,7 @@ public class PlayerResourcesHandler : MonoBehaviour
     public void GiveResource(ResourceData resourceGiven)
     {
         playerResources.copper += resourceGiven.copper;
-        playerResources.silver += resourceGiven.silver;
+        playerResources.iron += resourceGiven.iron;
         playerResources.gold += resourceGiven.gold;
     }
 
