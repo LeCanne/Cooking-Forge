@@ -50,8 +50,13 @@ MonoBehaviour:
   weaponParts:
   - {fileID: 8384960298877292394}
   - {fileID: 5312530802328021420}
-  weaponName: Test Sword
-  weaponType: 0
+  value: 0
+  weaponData:
+    WeaponName: 
+    weaponType: 0
+    material: 0
+    description: 
+    WeaponPrefab: {fileID: 0}
 --- !u!1 &5312530802328021420
 GameObject:
   m_ObjectHideFlags: 0

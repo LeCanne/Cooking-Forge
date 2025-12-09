@@ -23,7 +23,7 @@ public class DropdownMenu : MonoBehaviour
     //HandlePadding
     public VerticalLayoutGroup vLayout;
     public GameObject dropdownImg;
-    bool closed;
+    bool closed = true;
     float maxTopPadding;
 
     //StockLerping
@@ -34,6 +34,7 @@ public class DropdownMenu : MonoBehaviour
 
     private void Awake()
     {
+        SizeContainers();
         originalHeight = gameObject.GetComponent<RectTransform>().sizeDelta.y;
         vLayout.spacing = minspacing;
         foreach (RectTransform rect in rects.GetComponentInChildren<RectTransform>())
@@ -42,6 +43,7 @@ public class DropdownMenu : MonoBehaviour
             Debug.Log(rect.sizeDelta.y);
         }
         maximumHeight += gameObject.GetComponent<RectTransform>().sizeDelta.y + vLayout.padding.top + spacing;
+       
     }
 
 

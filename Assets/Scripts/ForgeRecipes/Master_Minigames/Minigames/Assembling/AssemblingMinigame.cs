@@ -42,13 +42,14 @@ public class AssemblingMinigame : ForgeMinigame
             {
                 
                 spr.color = Color.black;
+                spr.sortingOrder = 7;
                 maxToken += 1;
             }
 
             GameObject part = Instantiate(go, transform);
             if(part.TryGetComponent(out SpriteRenderer sprother))
             {
-                sprother.sortingOrder = 1;
+                sprother.sortingOrder = 8;
             }
             part.transform.position = transform.position + new Vector3(Random.Range(-3f, 3f), Random.Range(-3f, 3f), 0);
             WeaponPart wp = part.AddComponent<WeaponPart>();
