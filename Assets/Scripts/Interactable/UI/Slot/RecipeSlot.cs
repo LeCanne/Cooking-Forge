@@ -21,7 +21,7 @@ public class RecipeSlot : MonoBehaviour
     {
        
         InitalizeSlot();
-     
+       
         //DefineMoneyCost();
       
        
@@ -32,6 +32,12 @@ public class RecipeSlot : MonoBehaviour
     {
        
         recipeName.text = recipeObject.recipeData.WeaponObject.WeaponData.WeaponName;
+        recipeButton.onClick.AddListener(SendInfo);
+    }
+
+    void SendInfo()
+    {
+        RecipesHandler.Instance.SendRecipeInfo(recipeObject, resourceCost);
     }
   
 

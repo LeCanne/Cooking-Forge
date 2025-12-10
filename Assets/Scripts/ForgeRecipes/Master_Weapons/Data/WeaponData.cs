@@ -8,7 +8,7 @@ public class WeaponData
     public enum MATERIAL
     {
         copper,
-        silver,
+        iron,
         gold
     }
     public MATERIAL material;

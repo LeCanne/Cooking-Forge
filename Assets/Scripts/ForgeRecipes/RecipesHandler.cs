@@ -11,6 +11,8 @@ public class RecipesHandler: MonoBehaviour
     public MinigameObject[] forgeMinigame;
     private List<ForgeMinigame> _minigames = new List<ForgeMinigame>();
     public event Action recipeStarted;
+    public event Action<Recipe, ResourceData> recipeSent;
+    
     public UnityEvent NextMinigame = new UnityEvent();
     public UnityEvent MinigamesOver = new UnityEvent();
     [HideInInspector]public UnityEvent<RecipeData, float> broadcastResult = new UnityEvent<RecipeData,float>();
@@ -55,6 +57,15 @@ public class RecipesHandler: MonoBehaviour
     {
         NextMinigame.Invoke();
     }
+
+    public void SendRecipeInfo(Recipe recipe, ResourceData resourceData)
+    {
+        recipeSent?.Invoke(recipe, resourceData);
+    }
+
+
+
+    
 
     IEnumerator MinigameProcess(Recipe recipeObject)
     {
