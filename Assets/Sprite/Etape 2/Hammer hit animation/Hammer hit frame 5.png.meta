@@ -1,0 +1,975 @@
+fileFormatVersion: 2
+guid: a4b0f5cfd795ccf42b417cece786eb1c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4774974443417974410
+    second: Hammer hit frame 5_0
+  - first:
+      213: -2170837612313865075
+    second: Hammer hit frame 5_1
+  - first:
+      213: -7616548357499867246
+    second: Hammer hit frame 5_2
+  - first:
+      213: 3038816630236654287
+    second: Hammer hit frame 5_3
+  - first:
+      213: -5562288423091485070
+    second: Hammer hit frame 5_4
+  - first:
+      213: -7245352954480236033
+    second: Hammer hit frame 5_5
+  - first:
+      213: 433990649889000397
+    second: Hammer hit frame 5_6
+  - first:
+      213: 7432509686357028130
+    second: Hammer hit frame 5_7
+  - first:
+      213: 1117591216104113238
+    second: Hammer hit frame 5_8
+  - first:
+      213: -8810136784366438779
+    second: Hammer hit frame 5_9
+  - first:
+      213: 5708298371025277627
+    second: Hammer hit frame 5_10
+  - first:
+      213: 2470427063210707483
+    second: Hammer hit frame 5_11
+  - first:
+      213: 904673943200753349
+    second: Hammer hit frame 5_12
+  - first:
+      213: 210981982402604005
+    second: Hammer hit frame 5_13
+  - first:
+      213: -8705413980167209260
+    second: Hammer hit frame 5_14
+  - first:
+      213: -4817398603900555872
+    second: Hammer hit frame 5_15
+  - first:
+      213: 2471078075693804285
+    second: Hammer hit frame 5_16
+  - first:
+      213: 6418217118216556127
+    second: Hammer hit frame 5_17
+  - first:
+      213: 5153545078283281379
+    second: Hammer hit frame 5_18
+  - first:
+      213: -275884372110461421
+    second: Hammer hit frame 5_19
+  - first:
+      213: 217363453188621241
+    second: Hammer hit frame 5_20
+  - first:
+      213: -9181961224903871026
+    second: Hammer hit frame 5_21
+  - first:
+      213: -5849796301187257522
+    second: Hammer hit frame 5_22
+  - first:
+      213: -4610213368276250811
+    second: Hammer hit frame 5_23
+  - first:
+      213: -1814563834608022755
+    second: Hammer hit frame 5_24
+  - first:
+      213: -9197003291315953170
+    second: Hammer hit frame 5_25
+  - first:
+      213: -1198775826817259853
+    second: Hammer hit frame 5_26
+  - first:
+      213: -782076232583269029
+    second: Hammer hit frame 5_27
+  - first:
+      213: 9137884693194868504
+    second: Hammer hit frame 5_28
+  - first:
+      213: -4924903614623139308
+    second: Hammer hit frame 5_29
+  - first:
+      213: -6083515721418355162
+    second: Hammer hit frame 5_30
+  - first:
+      213: 1454418514165428724
+    second: Hammer hit frame 5_31
+  - first:
+      213: 7442243433500143813
+    second: Hammer hit frame 5_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hammer hit frame 5_0
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 541
+        width: 45
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 679c088ea02ebbdb0800000000000000
+      internalID: -4774974443417974410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_1
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 558
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8499f471b2afd1e0800000000000000
+      internalID: -2170837612313865075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 558
+        width: 39
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29fa2a08f959c4690800000000000000
+      internalID: -7616548357499867246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_3
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 550
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fca2ec6ff9b0c2a20800000000000000
+      internalID: 3038816630236654287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_4
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 371
+        width: 587
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2764d534628cec2b0800000000000000
+      internalID: -5562288423091485070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_5
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 526
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9e0eb10e5537b90800000000000000
+      internalID: -7245352954480236033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_6
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 486
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb897a5238d50600800000000000000
+      internalID: 433990649889000397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_7
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 465
+        width: 56
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22de5fc3e24952760800000000000000
+      internalID: 7432509686357028130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_8
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 473
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6548bff2a4b728f00800000000000000
+      internalID: 1117591216104113238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_9
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 420
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5867c31d54b1cb580800000000000000
+      internalID: -8810136784366438779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_10
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 416
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb217e4ef13f73f40800000000000000
+      internalID: 5708298371025277627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 375
+        width: 58
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1a8f2a3358b84220800000000000000
+      internalID: 2470427063210707483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_12
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 395
+        width: 76
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c6680e782c0e8c00800000000000000
+      internalID: 904673943200753349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_13
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 370
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb6d13cefe8de200800000000000000
+      internalID: 210981982402604005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_14
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 365
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4def969bb18203780800000000000000
+      internalID: -8705413980167209260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_15
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 319
+        width: 78
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad6b015e79252db0800000000000000
+      internalID: -4817398603900555872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_16
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 350
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfa2cf1ea680b4220800000000000000
+      internalID: 2471078075693804285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_17
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 356
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e01aeb676121950800000000000000
+      internalID: 6418217118216556127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_18
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 358
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e3a90da1f1158740800000000000000
+      internalID: 5153545078283281379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_19
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 345
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 316364110acdb2cf0800000000000000
+      internalID: -275884372110461421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_20
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 309
+        width: 72
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b3c576b8ea340300800000000000000
+      internalID: 217363453188621241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_21
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 325
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5b1300aee139080800000000000000
+      internalID: -9181961224903871026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_22
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 323
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4be653f14951dea0800000000000000
+      internalID: -5849796301187257522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_23
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 330
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54f03251e5b3500c0800000000000000
+      internalID: -4610213368276250811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_24
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 321
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1b0bef6ecf51d6e0800000000000000
+      internalID: -1814563834608022755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_25
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 247
+        width: 85
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1a30ffb3ead5080800000000000000
+      internalID: -9197003291315953170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_26
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 295
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b66b35acb71d5fe0800000000000000
+      internalID: -1198775826817259853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_27
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 284
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5539916fc18525f0800000000000000
+      internalID: -782076232583269029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_28
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 307
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8170c50c6b940de70800000000000000
+      internalID: 9137884693194868504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_29
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 245
+        width: 66
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ab959714a37abb0800000000000000
+      internalID: -4924903614623139308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_30
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 255
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62eca57eea2039ba0800000000000000
+      internalID: -6083515721418355162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_31
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 198
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f1f49bcee12f2410800000000000000
+      internalID: 1454418514165428724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer hit frame 5_32
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 202
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c072c9d8f8284760800000000000000
+      internalID: 7442243433500143813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Hammer hit frame 5_0: -4774974443417974410
+      Hammer hit frame 5_1: -2170837612313865075
+      Hammer hit frame 5_10: 5708298371025277627
+      Hammer hit frame 5_11: 2470427063210707483
+      Hammer hit frame 5_12: 904673943200753349
+      Hammer hit frame 5_13: 210981982402604005
+      Hammer hit frame 5_14: -8705413980167209260
+      Hammer hit frame 5_15: -4817398603900555872
+      Hammer hit frame 5_16: 2471078075693804285
+      Hammer hit frame 5_17: 6418217118216556127
+      Hammer hit frame 5_18: 5153545078283281379
+      Hammer hit frame 5_19: -275884372110461421
+      Hammer hit frame 5_2: -7616548357499867246
+      Hammer hit frame 5_20: 217363453188621241
+      Hammer hit frame 5_21: -9181961224903871026
+      Hammer hit frame 5_22: -5849796301187257522
+      Hammer hit frame 5_23: -4610213368276250811
+      Hammer hit frame 5_24: -1814563834608022755
+      Hammer hit frame 5_25: -9197003291315953170
+      Hammer hit frame 5_26: -1198775826817259853
+      Hammer hit frame 5_27: -782076232583269029
+      Hammer hit frame 5_28: 9137884693194868504
+      Hammer hit frame 5_29: -4924903614623139308
+      Hammer hit frame 5_3: 3038816630236654287
+      Hammer hit frame 5_30: -6083515721418355162
+      Hammer hit frame 5_31: 1454418514165428724
+      Hammer hit frame 5_32: 7442243433500143813
+      Hammer hit frame 5_4: -5562288423091485070
+      Hammer hit frame 5_5: -7245352954480236033
+      Hammer hit frame 5_6: 433990649889000397
+      Hammer hit frame 5_7: 7432509686357028130
+      Hammer hit frame 5_8: 1117591216104113238
+      Hammer hit frame 5_9: -8810136784366438779
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
