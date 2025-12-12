@@ -13,10 +13,6 @@ public class CommissionData
         Material,
         Equipment,
         Both
-        
     }
     [SerializeField] public COMMISSIONTYPE type;
-    
-    
-
 }

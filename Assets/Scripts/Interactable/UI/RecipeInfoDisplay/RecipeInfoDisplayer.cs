@@ -20,6 +20,11 @@ public class RecipeInfoDisplayer : MonoBehaviour
     {
         btnLaunchRecipe.onClick.RemoveAllListeners();
         WeaponData weapondata = recipe.recipeData.WeaponObject.WeaponData;
+        ResourceData dataCost = recipe.recipeData.resourceCost;
+
+        dataCost.copper = resourceData.copper;
+        dataCost.iron = resourceData.iron;
+        dataCost.gold = resourceData.gold;
 
         if (weapondata != null)
         {

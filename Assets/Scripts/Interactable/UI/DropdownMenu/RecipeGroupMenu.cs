@@ -8,19 +8,15 @@ public class RecipeGroupMenu : MonoBehaviour
 
     public RecipeSlot recipeSlot;
     public GameObject recipeContainer;
-
     public DropdownMenu dropDown;
     public RecipeGroup recipeGroup;
     private int resourceCost;
     private int recipeGroupCost;
     public bool bought;
-    
     public Image costImage;
-
     public TMP_Text recipeGroupName;
     public TMP_Text recipeRessourceCost;
     public TMP_Text recipeMoneyCost;
-
 
     private void Awake()
     {
@@ -31,14 +27,12 @@ public class RecipeGroupMenu : MonoBehaviour
         InstantiateRecipes();
     }
        
-
     void DefineMoneyCost()
     {
          recipeGroupName.text = recipeGroup.data.recipeGroupName;
          recipeRessourceCost.text = resourceCost.ToString();
          recipeMoneyCost.text = recipeGroupCost.ToString();
     }
-
 
     RecipeSlot NewSlot() 
     {
@@ -61,6 +55,7 @@ public class RecipeGroupMenu : MonoBehaviour
     {
         RecipeSlot slot = NewSlot();
         slot.recipeObject = recipeGroup.data.copperRecipe;
+      
         slot.resourceCost.copper = recipeGroup.data.resourceCost;
         slot.InitalizeSlot();
 
@@ -70,6 +65,7 @@ public class RecipeGroupMenu : MonoBehaviour
     {
         RecipeSlot slot = NewSlot();
         slot.recipeObject = recipeGroup.data.ironRecipe;
+       
         slot.resourceCost.iron = recipeGroup.data.resourceCost;
         slot.InitalizeSlot();
 
@@ -79,12 +75,12 @@ public class RecipeGroupMenu : MonoBehaviour
     {
         RecipeSlot slot = NewSlot();
         slot.recipeObject = recipeGroup.data.goldRecipe;
+       
         slot.resourceCost.gold = recipeGroup.data.resourceCost;
         slot.InitalizeSlot();
 
     }
 
-   
     public void TriggerRecipeGroup()
     {
         if(bought == false)
@@ -102,5 +98,4 @@ public class RecipeGroupMenu : MonoBehaviour
        
     }
 
-    
 }

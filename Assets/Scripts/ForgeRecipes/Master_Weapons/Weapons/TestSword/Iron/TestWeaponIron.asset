@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da65712efe26ba94383926ed2137f3d2, type: 3}
-  m_Name: TestWeapon
+  m_Name: TestWeaponIron
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
   WeaponData:
-    WeaponName: Test Sword
+    WeaponName: Test_Iron
     weaponType: 0
-    material: 2
-    description: A weapon created by godly creators outside of the scope of their
-      creation, tested by the world makers to see if forging could become a godly
-      thing.
+    material: 1
+    description: 'Iron Sword
+
+'
     WeaponPrefab: {fileID: 2030780106681992430, guid: cc1819a057904ba4cb6c4c3fc749e0d5, type: 3}

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: CommissionKnight
   m_EditorClassIdentifier: Assembly-CSharp::Commission
   data:
-    name: A cool Sword
+    CommissionName: iron william or something
+    weapon: {fileID: 11400000, guid: 88fa6e97b5b3cd0489ba29e219a074a9, type: 2}
     dialogue:
     - "Bonjour donne moi \xE9p\xE9e pls pls ps"
-    type: 1
+    type: 2

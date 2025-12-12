@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4732e044988c4c240b8429b9fc52f95b, type: 3}
+  m_Name: RecipeTest_Iron
+  m_EditorClassIdentifier: Assembly-CSharp::Recipe
+  recipeData:
+    WeaponObject: {fileID: 11400000, guid: 88fa6e97b5b3cd0489ba29e219a074a9, type: 2}
+    resourceCost:
+      gold: 0
+      iron: 0
+      copper: 0
+    difficulty: 0
+    minigames:
+    - {fileID: 11400000, guid: 85fc6f0369087544eb10a0ae03be0d21, type: 2}
+    - {fileID: 11400000, guid: 47a3942ac32a1df40b78dd6ffb95a8be, type: 2}

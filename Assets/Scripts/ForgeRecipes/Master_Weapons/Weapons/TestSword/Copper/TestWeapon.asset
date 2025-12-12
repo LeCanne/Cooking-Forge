@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da65712efe26ba94383926ed2137f3d2, type: 3}
+  m_Name: TestWeapon
+  m_EditorClassIdentifier: Assembly-CSharp::Weapon
+  WeaponData:
+    WeaponName: Test Sword
+    weaponType: 0
+    material: 0
+    description: A weapon created by godly creators outside of the scope of their
+      creation, tested by the world makers to see if forging could become a godly
+      thing.
+    WeaponPrefab: {fileID: 2030780106681992430, guid: cc1819a057904ba4cb6c4c3fc749e0d5, type: 3}
