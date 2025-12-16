@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestWeaponGold
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
   WeaponData:
-    WeaponName: Test_Gold
+    WeaponName: test_gold
     weaponType: 0
     material: 2
     description: 'cooldesc

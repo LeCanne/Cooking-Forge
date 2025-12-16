@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RecipeGroup
   data:
     recipeGroupName: Test_Recipe
-    resourceCost: 2
+    resourceCost: 4
     recipeCost: 5
     copperRecipe: {fileID: 11400000, guid: f3704d269f32eaf4ea222173b17b6f73, type: 2}
     ironRecipe: {fileID: 11400000, guid: 5ed371f343feb75438d342a4e83dc8c3, type: 2}

@@ -16,7 +16,7 @@ MonoBehaviour:
     WeaponObject: {fileID: 11400000, guid: 88fa6e97b5b3cd0489ba29e219a074a9, type: 2}
     resourceCost:
       gold: 0
-      iron: 0
+      iron: 4
       copper: 0
     difficulty: 0
     minigames:
