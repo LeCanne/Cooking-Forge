@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 44db6b5470eabbd448d3ab2e56c06def
+guid: 717b73ac8fdb2ca45b51f504539254a0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3021162699809284017
-    second: knight_commission_0
+      213: 2677149973976692501
+    second: LumberJack_Comission_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: knight_commission_0
+      name: LumberJack_Comission_0
       rect:
         serializedVersion: 2
-        x: 125
-        y: 199
-        width: 633
-        height: 879
+        x: 257
+        y: 182
+        width: 619
+        height: 735
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1bfdacaf7735de920800000000000000
-      internalID: 3021162699809284017
+      spriteID: 517b35997b5272520800000000000000
+      internalID: 2677149973976692501
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      knight_commission_0: 3021162699809284017
+      LumberJack_Comission_0: 2677149973976692501
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
