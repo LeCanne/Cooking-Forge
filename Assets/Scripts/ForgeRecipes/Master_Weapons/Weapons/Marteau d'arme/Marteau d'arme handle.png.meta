@@ -103,8 +103,8 @@ TextureImporter:
       name: Marteau d'arme handle_0
       rect:
         serializedVersion: 2
-        x: 485
-        y: 160
+        x: 905
+        y: 108
         width: 91
         height: 696
       alignment: 0

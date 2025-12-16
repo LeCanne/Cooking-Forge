@@ -103,10 +103,10 @@ TextureImporter:
       name: Spear handle_0
       rect:
         serializedVersion: 2
-        x: 502
-        y: 149
-        width: 52
-        height: 755
+        x: 943
+        y: 4
+        width: 54
+        height: 684
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
