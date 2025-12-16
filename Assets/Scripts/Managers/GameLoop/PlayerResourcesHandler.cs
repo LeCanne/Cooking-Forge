@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ public class PlayerResourcesHandler : MonoBehaviour
     {
         get 
         { 
-            if((object)_instance == null)
+            if(_instance == null)
             {
                 GameObject go = new GameObject("ResourcesHandler");
                 _instance = go.AddComponent<PlayerResourcesHandler>();
@@ -20,6 +21,8 @@ public class PlayerResourcesHandler : MonoBehaviour
     }
 
     public ResourceData playerResources;
+    public event Action moneyUpdate;
+    public event Action updateMaterial;
     public int money;
 
     private void Awake()
@@ -37,13 +40,8 @@ public class PlayerResourcesHandler : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        MoneyUpdated();
+        MaterialUpdated();
     }
 
     public bool Craftable(ResourceData resourceTaken)
@@ -73,6 +71,7 @@ public class PlayerResourcesHandler : MonoBehaviour
         playerResources.copper = newCopper;
         playerResources.iron = newSilver; 
         playerResources.gold = newGold;
+        MaterialUpdated();
         return true;
     }
 
@@ -81,6 +80,7 @@ public class PlayerResourcesHandler : MonoBehaviour
         playerResources.copper += resourceGiven.copper;
         playerResources.iron += resourceGiven.iron;
         playerResources.gold += resourceGiven.gold;
+        MaterialUpdated();
     }
 
     public bool Buyable(int price)
@@ -90,12 +90,25 @@ public class PlayerResourcesHandler : MonoBehaviour
             return false;
         }
         money -= price;
+        MoneyUpdated();
         return true;
     }
 
     public void GiveMoney(int moneyGiven)
     {
+      
         money += moneyGiven;
+        MoneyUpdated();
+    }
+
+    public void MoneyUpdated()
+    {
+        moneyUpdate?.Invoke();
+    }
+
+    public void MaterialUpdated()
+    {
+        updateMaterial?.Invoke();
     }
 
 

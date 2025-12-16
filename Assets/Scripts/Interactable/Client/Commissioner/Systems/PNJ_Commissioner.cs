@@ -58,11 +58,11 @@ public class PNJ_Commissioner : MonoBehaviour
             if (commissionData.weapon.WeaponData.weaponType == weaponData.weaponData.weaponType)
             {
                 Debug.Log("GoodType");
-                PlayerResourcesHandler.Instance.money += weaponData.value;
+                GiveMoney(weaponData.value);
             }
             else
             {
-                PlayerResourcesHandler.Instance.money += Mathf.RoundToInt(weaponData.value * 0.5f);
+                GiveMoney(Mathf.RoundToInt(weaponData.value * 0.5f));
             }
             commissionDone.Invoke(commissionNumber + 1);
         }
@@ -71,11 +71,11 @@ public class PNJ_Commissioner : MonoBehaviour
             if (commissionData.weapon.WeaponData.material == weaponData.weaponData.material)
             {
                 Debug.Log("GoodMaterial");
-                PlayerResourcesHandler.Instance.money += weaponData.value;
+                GiveMoney(weaponData.value);
             }
             else
             {
-                PlayerResourcesHandler.Instance.money += Mathf.RoundToInt(weaponData.value * 0.5f);
+                GiveMoney(Mathf.RoundToInt(weaponData.value * 0.5f));
             }
             commissionDone.Invoke(commissionNumber + 1);
         }
@@ -100,19 +100,24 @@ public class PNJ_Commissioner : MonoBehaviour
             switch (goodToken)
             {
                 case 0:
-                    PlayerResourcesHandler.Instance.money += Mathf.RoundToInt(weaponData.value * 0.25f);
+                    GiveMoney(Mathf.RoundToInt(weaponData.value * 0.25f));
                     break;
 
                 case 1:
-                    PlayerResourcesHandler.Instance.money += Mathf.RoundToInt(weaponData.value * 0.5f);
+                   GiveMoney(Mathf.RoundToInt(weaponData.value * 0.5f));
                     break;
                 case 2:
-                    PlayerResourcesHandler.Instance.money += weaponData.value;
+                    GiveMoney(weaponData.value);
                     break;
             }
 
                 commissionDone.Invoke(commissionNumber + 1);
         }  
        
+    }
+
+    void GiveMoney(int money)
+    {
+        PlayerResourcesHandler.Instance.GiveMoney(money);
     }
 }

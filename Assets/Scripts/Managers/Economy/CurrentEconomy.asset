@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EconomyData
   copperPrice: 15
   copperMultiplier: 1.25
-  silverPrice: 25
-  silverMultiplier: 1.5
+  ironPrice: 25
+  ironMultiplier: 1.5
   goldPrice: 40
   goldMultiplier: 1.75
   penaltyMult: 0.75

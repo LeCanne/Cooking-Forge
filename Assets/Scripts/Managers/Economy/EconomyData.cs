@@ -6,9 +6,9 @@ public class EconomyData : ScriptableObject
     [Header("Copper")]
     public int copperPrice;
     public float copperMultiplier;
-    [Header("Silver")]
-    public int silverPrice;
-    public float silverMultiplier;
+    [Header("Iron")]
+    public int ironPrice;
+    public float ironMultiplier;
     [Header("Gold")]
     public int goldPrice;
     public float goldMultiplier;
