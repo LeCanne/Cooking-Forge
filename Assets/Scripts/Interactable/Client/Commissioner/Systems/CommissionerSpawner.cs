@@ -15,7 +15,7 @@ public class CommissionerSpawner : MonoBehaviour
     void SpawnCommission(int currentCommission, CommissionerObject commissionerObject)
     {
         //First create a Commissioner Recipient
-        PNJ_Commissioner thisCommission = Instantiate(currentCommissioner);
+        PNJ_Commissioner thisCommission = Instantiate(currentCommissioner, transform);
         
 
         //Then add every commissioner states, and a callback to DayHandler.
@@ -23,9 +23,6 @@ public class CommissionerSpawner : MonoBehaviour
         thisCommission.commissionNumber = currentCommission;
         thisCommission.commissionDone.AddListener(DayHandler.Instance.DoCommissioner);
         thisCommission.InitializeCommissioner();
-
-
-       
     }
     
 }

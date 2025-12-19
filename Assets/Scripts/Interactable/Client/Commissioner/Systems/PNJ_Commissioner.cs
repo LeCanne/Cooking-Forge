@@ -6,28 +6,22 @@ public class PNJ_Commissioner : MonoBehaviour
     
     public CommissionerObject commissioner;
     public int commissionNumber;
-    SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     CommissionData commissionData;
     public EconomyData economyData;
     int currentReward;
-
     [HideInInspector]public UnityEvent<int> commissionDone = new UnityEvent<int>();
 
 
     private void Awake()
     {
       
-        spriteRenderer = GetComponent<SpriteRenderer>();
-      
-        
-        
-
     }
 
     public void InitializeCommissioner()
     {
         commissionData = commissioner.CommissionerData.commision.data;
-        
+        spriteRenderer.sprite = commissioner.CommissionerData.sprite;
         //spriteRenderer.sprite = commissioner.CommissionerData.sprite;
     }
     
