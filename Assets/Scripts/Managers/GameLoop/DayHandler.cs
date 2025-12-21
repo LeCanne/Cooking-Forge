@@ -12,10 +12,9 @@ public class DayHandler : MonoBehaviour
     private int comNum;
 
     DayData currentDay;
-
     [HideInInspector]public UnityEvent<int, CommissionerObject> callCommissioner = new UnityEvent<int, CommissionerObject>();
-    
-    
+    public PNJ_Commissioner currentCommissioner;
+
     public static DayHandler Instance
     {
         get
@@ -70,6 +69,8 @@ public class DayHandler : MonoBehaviour
             EndDay();
         }
     }
+
+   
 
     private void EndDay()
     {

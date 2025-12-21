@@ -40,6 +40,8 @@ public class WeaponSpawner : MonoBehaviour
                 break;
         }
         myWeapon.value = Mathf.CeilToInt(result);
+
+        DayHandler.Instance.currentCommissioner.EvaluateCommission(myWeapon);
         Debug.Log(result);
         Debug.Log(percentageResult);
         

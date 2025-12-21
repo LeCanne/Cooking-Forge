@@ -22,6 +22,7 @@ public class PNJ_Commissioner : MonoBehaviour
     {
         commissionData = commissioner.CommissionerData.commision.data;
         spriteRenderer.sprite = commissioner.CommissionerData.sprite;
+        DialogueHandler.Instance.SendDialogue(commissionData.dialogue);
         //spriteRenderer.sprite = commissioner.CommissionerData.sprite;
     }
     
@@ -32,22 +33,21 @@ public class PNJ_Commissioner : MonoBehaviour
         {
             //Checks the commission and does a behavior
             EvaluateCommission(finishedObject);
+           
+
             
 
-            //Clears the Commissioner and the Commission
-            //WARN: May be bad practice, object pooling might be considered.
-            Destroy(finishedObject.gameObject);
-            Destroy(gameObject);
+
 
         }
     }
 
 
     //Compares data of the commission with the data of the finished object.
-    void EvaluateCommission(WeaponObject weaponData)
+    public void EvaluateCommission(WeaponObject weaponData)
     {
-         
-        if(commissionData.type == CommissionData.COMMISSIONTYPE.Equipment)
+
+        if (commissionData.type == CommissionData.COMMISSIONTYPE.Equipment)
         {
             if (commissionData.weapon.WeaponData.weaponType == weaponData.weaponData.weaponType)
             {
@@ -58,9 +58,9 @@ public class PNJ_Commissioner : MonoBehaviour
             {
                 GiveMoney(Mathf.RoundToInt(weaponData.value * 0.5f));
             }
-            commissionDone.Invoke(commissionNumber + 1);
+            
         }
-        else if(commissionData.type == CommissionData.COMMISSIONTYPE.Material)
+        else if (commissionData.type == CommissionData.COMMISSIONTYPE.Material)
         {
             if (commissionData.weapon.WeaponData.material == weaponData.weaponData.material)
             {
@@ -71,24 +71,24 @@ public class PNJ_Commissioner : MonoBehaviour
             {
                 GiveMoney(Mathf.RoundToInt(weaponData.value * 0.5f));
             }
-            commissionDone.Invoke(commissionNumber + 1);
+            
         }
-        else if(commissionData.type == CommissionData.COMMISSIONTYPE.Both) 
+        else if (commissionData.type == CommissionData.COMMISSIONTYPE.Both)
         {
             int goodToken = 0;
-           
+
             if (commissionData.weapon.WeaponData.weaponType == weaponData.weaponData.weaponType)
             {
 
                 Debug.Log("GoodType");
                 goodToken += 1;
-               
+
             }
             if (commissionData.weapon.WeaponData.material == weaponData.weaponData.material)
             {
                 Debug.Log("GoodMaterial");
                 goodToken += 1;
-                
+
             }
 
             switch (goodToken)
@@ -98,16 +98,29 @@ public class PNJ_Commissioner : MonoBehaviour
                     break;
 
                 case 1:
-                   GiveMoney(Mathf.RoundToInt(weaponData.value * 0.5f));
+                    GiveMoney(Mathf.RoundToInt(weaponData.value * 0.5f));
                     break;
                 case 2:
                     GiveMoney(weaponData.value);
                     break;
             }
-
-                commissionDone.Invoke(commissionNumber + 1);
-        }  
+         
+        }
+        Destroy(weaponData.gameObject);
+        EndCommission();
        
+       
+        
+
+
+    }
+
+    void EndCommission()
+    {
+        Debug.Log("ended");
+        commissionDone.Invoke(commissionNumber + 1);
+        Destroy(gameObject);
+        
     }
 
     void GiveMoney(int money)

@@ -16,7 +16,5 @@ MonoBehaviour:
     WeaponName: Test Sword
     weaponType: 0
     material: 0
-    description: A weapon created by godly creators outside of the scope of their
-      creation, tested by the world makers to see if forging could become a godly
-      thing.
+    description: 'A dev Weapon made by a guy in his chair '
     WeaponPrefab: {fileID: 2030780106681992430, guid: cc1819a057904ba4cb6c4c3fc749e0d5, type: 3}

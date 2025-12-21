@@ -16,5 +16,6 @@ MonoBehaviour:
     CommissionName: Cool Sword
     weapon: {fileID: 11400000, guid: 6670430d6ebf6b04c86e566fd1124e3c, type: 2}
     dialogue:
-    - Hello! I would like a cool as fuck sword please.
-    - What do you mean you don't have that? Make one!
+    - Hello! I would like a something made of copper please. Any will do the trick,
+      it's a gift for a friend!
+    type: 0

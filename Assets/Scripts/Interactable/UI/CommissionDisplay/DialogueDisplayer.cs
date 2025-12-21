@@ -13,22 +13,32 @@ public class DialogueDisplayer : MonoBehaviour
     [TextArea(0,100)]public string[] texttoTest;
     //private AudioSource audioClip;
     Coroutine currentDialogue;
-   
+    string[] lastDialogue;
+
 
     
-
+    private void OnEnable()
+    {
+        if (lastDialogue != null)
+        {
+            DisplayDialogue(lastDialogue);
+        }
+    }
     private void Awake()
     {
         //audioClip = GetComponent<AudioSource>();
-        DisplayDialogue(texttoTest);
+        //DisplayDialogue(texttoTest);
+        DialogueHandler.Instance.dialogueSent += DisplayDialogue;
     }
 
     public void DisplayDialogue(string[] dialogue)
     {
+        lastDialogue = dialogue;
         if (currentDialogue != null)
         {
             StopCoroutine(currentDialogue);
         }
+        
         currentDialogue = StartCoroutine(HandleDialogue(dialogue)); 
     }
 

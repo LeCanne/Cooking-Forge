@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Knight
   m_EditorClassIdentifier: Assembly-CSharp::CommissionerObject
   CommissionerData:
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 44db6b5470eabbd448d3ab2e56c06def, type: 3}
     commision: {fileID: 11400000, guid: 97427b70ec5199243a9258589468355d, type: 2}
