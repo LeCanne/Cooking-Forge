@@ -43,6 +43,11 @@ public class ShopSlotButton : MonoBehaviour
         PlayerResourcesHandler.Instance.updateMaterial += UpdateMaterials;
     }
 
+    private void OnEnable()
+    {
+        UpdateMaterials();
+    }
+
     void UpdateMaterials()
     {
         int amount = 0;

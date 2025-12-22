@@ -5338,6 +5338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CommissionScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 4015081605290733983, guid: 79383d2ba997d0341babf7facc6c4e35, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4618633701976860910, guid: 79383d2ba997d0341babf7facc6c4e35, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -5533,6 +5537,22 @@ PrefabInstance:
     - target: {fileID: 7731606304927319821, guid: 79383d2ba997d0341babf7facc6c4e35, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8055645780723747204, guid: 79383d2ba997d0341babf7facc6c4e35, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 440.8634
+      objectReference: {fileID: 0}
+    - target: {fileID: 8055645780723747204, guid: 79383d2ba997d0341babf7facc6c4e35, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 131.4138
+      objectReference: {fileID: 0}
+    - target: {fileID: 8055645780723747204, guid: 79383d2ba997d0341babf7facc6c4e35, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 41.3709
+      objectReference: {fileID: 0}
+    - target: {fileID: 8055645780723747204, guid: 79383d2ba997d0341babf7facc6c4e35, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 36.00689
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
