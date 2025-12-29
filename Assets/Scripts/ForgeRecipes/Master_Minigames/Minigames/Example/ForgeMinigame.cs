@@ -6,7 +6,8 @@ public class ForgeMinigame : MonoBehaviour
 {
     
     [HideInInspector]public UnityEvent MinigameComplete;
-    [HideInInspector]public WeaponObject weaponObject;
+   
+    public WeaponObject weaponObject;
     [SerializeField]public int difficulty;
     [SerializeField][Range(0f,1f)]public float quality;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,7 +24,8 @@ public class ForgeMinigame : MonoBehaviour
 
     public void Success()
     {
-        Debug.Log(quality);
+       
+        Debug.Log("Minigame Over! Quality : " + quality);
         MinigameComplete.Invoke();
     }
 }

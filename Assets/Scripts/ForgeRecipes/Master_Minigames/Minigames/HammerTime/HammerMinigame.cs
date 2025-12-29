@@ -16,7 +16,7 @@ public class HammerMinigame : ForgeMinigame
     {
         quality = 1;
         PlayerControlsHandler.Instance.Touch += HammerSlam;
-       ChangeBarLocation();
+        ChangeBarLocation();
     }
     private void OnDisable()
     {
